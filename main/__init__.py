@@ -10,12 +10,12 @@ from flask_mail import Mail
 from flask_wtf.csrf import CSRFProtect
 from flask_cors import CORS
 
-from main_pack.config import Config
+from main.config import Config
 
 login_manager = LoginManager()
-sess = Session()
 bcrypt = Bcrypt()
 babel = Babel()
+mail = Mail()
 db = SQLAlchemy()
 csrf = CSRFProtect()
 
@@ -51,15 +51,14 @@ def create_app(config_class=Config):
 	babel.init_app(app)
 	mail.init_app(app)
 	csrf.init_app(app)
-	sess.init_app(app)
 
 	main_url_prefix = app.config.get('MAIN_URL_PREFIX')
 	admin_url_prefix = app.config.get('ADMIN_URL_PREFIX')
 
-	# from main_pack.models import bp as models_bp
-	# app.register_blueprint(models_bp)
+	from main.models import bp as models_bp
+	app.register_blueprint(models_bp)
 
-	# from main_pack.main import bp as main_bp
+	# from main.main import bp as main_bp
 	# app.register_blueprint(main_bp,url_prefix=main_url_prefix)
 
 	# from main.auth import bp as auth_bp
