@@ -1,0 +1,17 @@
+**/__pycache__/
+**/venv/
+**/*.pyc
+*.swp
+*.db
+*.hg
+**/*.svn
+**/.DS_Store/
+**/uploads/
+**/.vscode/
+**/idea/
+.idea/
+.vs/
+.env
+.pk
+.pem
+.pub
