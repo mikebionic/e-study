@@ -13,7 +13,7 @@ from wtforms.validators import (
 	ValidationError)
 
 from main import babel,gettext,lazy_gettext
-from main.models.users.models import Users
+from main.models.user.models import User
 
 class LoginForm(FlaskForm):
 	email = StringField (validators=[DataRequired(),Email()])

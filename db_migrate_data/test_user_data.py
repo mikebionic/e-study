@@ -27,21 +27,3 @@ users = [
 		"UserTypeId": 3
 	}
 ]
-	
-user_types = [	
-	{
-		"UserTypeId": 1,
-		"UserTypeName": "Administrator",
-		"UserTypeInfo": "Administrator with admin priviledges"
-	},
-	{
-		"UserTypeId": 2,
-		"UserTypeName": "Moderator",
-		"UserTypeInfo": "Moderator with priviledges for data management"
-	},
-	{
-		"UserTypeId": 3,
-		"UserTypeName": "User",
-		"UserTypeInfo": "Default user"
-	},
-]

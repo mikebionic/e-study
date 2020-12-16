@@ -54,9 +54,13 @@ def create_app(config_class=Config):
 
 	main_url_prefix = app.config.get('MAIN_URL_PREFIX')
 	admin_url_prefix = app.config.get('ADMIN_URL_PREFIX')
+	api_url_prefix = app.config.get('API_URL_PREFIX')
 
 	from main.models import bp as models_bp
 	app.register_blueprint(models_bp)
+
+	from main.api.edu import bp as edu_api_bp
+	app.register_blueprint(edu_api_bp,url_prefix=api_url_prefix)
 
 	# from main.main import bp as main_bp
 	# app.register_blueprint(main_bp,url_prefix=main_url_prefix)
@@ -64,8 +68,8 @@ def create_app(config_class=Config):
 	# from main.auth import bp as auth_bp
 	# app.register_blueprint(auth_bp,url_prefix=main_url_prefix)
 
-	# from main.users import bp as users_bp
-	# app.register_blueprint(users_bp,url_prefix=main_url_prefix)
+	# from main.user import bp as user_bp
+	# app.register_blueprint(user_bp,url_prefix=main_url_prefix)
 
 	# from main.admin import bp as admin_bp
 	# app.register_blueprint(admin_bp,url_prefix=admin_url_prefix)

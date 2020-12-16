@@ -23,7 +23,9 @@ class Config:
 	SQLALCHEMY_DATABASE_URI = 'sqlite:///estudy.db'
 	SQLALCHEMY_ECHO = False
 
-	MAIN_URL_PREFIX = '/study'
+	MAIN_URL_PREFIX = '/edu'
+	ADMIN_URL_PREFIX = '/admin'
+	API_URL_PREFIX = '/api'
 
 	# default language for session
 	BABEL_DEFAULT_LOCALE = 'tk'

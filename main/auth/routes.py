@@ -7,7 +7,7 @@ from main.config import Config
 from main import db,bcrypt,babel,gettext,lazy_gettext
 from main.auth.forms import (
 	LoginForm)
-from main.models.users.models import Users,Rp_acc
+from main.models.user.models import User,Rp_acc
 
 
 @bp.route("/login",methods=['GET','POST'])
@@ -18,7 +18,7 @@ def login():
 	form = LoginForm()
 
 	if form.validate_on_submit(): 
-		user = Users.query.filter_by(UEmail=form.email.data).first()
+		user = User.query.filter_by(UEmail=form.email.data).first()
 		if user and bcrypt.check_password_hash(user.UPass,form.password.data):
 			login_user(user, remember = form.remember.data)
 			next_page = request.args.get("next")
