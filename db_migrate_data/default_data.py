@@ -19,37 +19,44 @@ user_types = [
 education_groups = [
 	{
 		"EducationGroupId": 1,
-		"EducationGroupName": "University",
-		"EducationGroupDescription": ""
+		"EducationGroupName": "School",
+		"EducationGroupDescription": "Study place",
+		"MainEducationGroupId": None
 	},
 	{
-		"EducationGroupId": 1,
-		"EducationGroupName": "University",
-		"EducationGroupDescription": ""
+		"EducationGroupId": 2,
+		"EducationGroupName": "Primary School",
+		"EducationGroupDescription": "Study place for children",
+		"MainEducationGroupId": 1
 	},
 	{
-		"EducationGroupId": 1,
-		"EducationGroupName": "University",
-		"EducationGroupDescription": ""
+		"EducationGroupId": 3,
+		"EducationGroupName": "Elementary School",
+		"EducationGroupDescription": "",
+		"MainEducationGroupId": 1
 	},
 	{
-		"EducationGroupId": 1,
-		"EducationGroupName": "University",
-		"EducationGroupDescription": ""
+		"EducationGroupId": 4,
+		"EducationGroupName": "Middle School",
+		"EducationGroupDescription": "",
+		"MainEducationGroupId": 1
 	},
 	{
-		"EducationGroupId": 1,
-		"EducationGroupName": "University",
-		"EducationGroupDescription": ""
+		"EducationGroupId": 5,
+		"EducationGroupName": "High school",
+		"EducationGroupDescription": "",
+		"MainEducationGroupId": 1
 	},
 	{
-		"EducationGroupId": 1,
-		"EducationGroupName": "University",
-		"EducationGroupDescription": ""
+		"EducationGroupId": 6,
+		"EducationGroupName": "Colleage",
+		"EducationGroupDescription": "",
+		"MainEducationGroupId": None
 	},
 	{
-		"EducationGroupId": 1,
+		"EducationGroupId": 7,
 		"EducationGroupName": "University",
-		"EducationGroupDescription": ""
+		"EducationGroupDescription": "",
+		"MainEducationGroupId": None
 	}
 ]

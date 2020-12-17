@@ -27,7 +27,9 @@ class Education_group(UpdatesInfo,db.Model):
 	EducationGroupId = db.Column(db.Integer,primary_key=True)
 	EducationGroupName = db.Column(db.String(100),nullable=False)
 	EducationGroupDescription = db.Column(db.String(500))
+	MainEducationGroupId = db.Column(db.Integer,db.ForeignKey("tbl_me_education_group.EducationGroupId"))
 	Education = db.relationship('Education',backref='education_group',lazy=True)
+	Education_group = db.relationship('Education_group',remote_side=EducationGroupId,backref='sub_education_group',lazy=True)
 	# EducationGroup = db.relationship('EducationGroup',backref='education_sub_group',lazy=True)
 	# many to many
 	
@@ -35,7 +37,8 @@ class Education_group(UpdatesInfo,db.Model):
 		json_data = {
 			"EducationGroupId": self.EducationGroupId,
 			"EducationGroupName": self.EducationGroupName,
-			"EducationGroupDescription": self.EducationGroupDescription
+			"EducationGroupDescription": self.EducationGroupDescription,
+			"MainEducationGroupId": self.MainEducationGroupId
 		}
 		return json_data
 
